@@ -7,10 +7,13 @@ namespace Command
 {
     public class CommandManager : MonoBehaviour, ICommandManager
     {
+        //TODO try to change singleton to Inject
         public static CommandManager Instanse;
+        
+        private List<ICommand> _commands = new List<ICommand>();
+
         public bool IsUndo { get; set; } = true;
 
-        private List<ICommand> _commands = new List<ICommand>();
         public void Awake()
         {
             Instanse = this;
