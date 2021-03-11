@@ -1,11 +1,14 @@
 ﻿using System;
 using UnityEngine;
+using Zenject;
 
 namespace Command
 {
     public class PlayerInput : MonoBehaviour
     {
         private ICommand command;
+
+
         public void Update()
         {
             if (CommandManager.Instanse.IsUndo)

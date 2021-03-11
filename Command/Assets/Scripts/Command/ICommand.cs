@@ -10,7 +10,9 @@ namespace Command
 
     public interface ICommandManager
     {
+        bool IsUndo { get;  set; }
         void AddCommand(ICommand command);
+        void UndoCommand();
     }
 }
 
