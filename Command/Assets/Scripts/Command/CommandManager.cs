@@ -5,10 +5,10 @@ using UnityEngine;
 
 namespace Command
 {
-    public class CommandManager : MonoBehaviour
+    public class CommandManager : MonoBehaviour, ICommandManager
     {
         public static CommandManager Instanse;
-        public bool isUndo = true;
+        public bool IsUndo { get; private set; } = true;
 
         public List<ICommand> Commands = new List<ICommand>();
         public void Awake()
@@ -31,12 +31,12 @@ namespace Command
                 yield return new WaitForSeconds(0.1f);
             }
             Commands.Clear();
-            isUndo = true;
+            IsUndo = true;
         }
         
         public void UndoCommand()
         {
-            isUndo = false;
+            IsUndo = false;
             StartCoroutine(UndoCommands());
         }
     }

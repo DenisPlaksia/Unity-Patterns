@@ -8,7 +8,7 @@ namespace Command
         private ICommand command;
         public void Update()
         {
-            if (CommandManager.Instanse.isUndo)
+            if (CommandManager.Instanse.IsUndo)
             {
                 if (Input.GetKeyDown(KeyCode.W))
                 {
@@ -22,12 +22,12 @@ namespace Command
 
                 if (Input.GetKeyDown(KeyCode.A))
                 {
-                
+                    CommandManager.Instanse.AddCommand(new MoveLeftCommand(gameObject));
                 }
 
                 if (Input.GetKeyDown(KeyCode.D))
                 {
-                
+                    CommandManager.Instanse.AddCommand(new MoveRightCommand(gameObject));
                 }
 
                 if (Input.GetKeyDown(KeyCode.R))

@@ -132,7 +132,7 @@ GameObject:
   - component: {fileID: 596782909}
   - component: {fileID: 596782908}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: CommandManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -150,7 +150,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94df0d8bd02b49e2b4bc0221f8366aec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isUndo: 1
 --- !u!4 &596782909
 Transform:
   m_ObjectHideFlags: 0

@@ -14,7 +14,7 @@ namespace Command
         public void Execute()
         {
             previousPosition = _player.transform.position;
-            _player.transform.position += new Vector3(_player.transform.position.x, 1f,_player.transform.position.z);
+            _player.transform.position += Vector3.up;
         }
 
         public void Undo()
